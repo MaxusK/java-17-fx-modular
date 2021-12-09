@@ -15,12 +15,9 @@ public class CalculatorApp extends Application {
         try {
 
             // create a root and load fxml code
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-            Parent root = loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Calculator.fxml"));
 
-            CalculatorController presenter = (CalculatorController) loader.getController();
-
-            Scene scene = new Scene(root,400,400);
+            Scene scene = new Scene(loader.load(),600,384);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Calculator App");
             primaryStage.show();
